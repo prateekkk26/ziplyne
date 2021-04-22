@@ -1,0 +1,144 @@
+.sidebar {
+	width: 100%;
+	position: sticky;
+	height: auto;
+	top: 0;
+	background-color: var(--mainWhite); 
+}
+
+.entry {
+	width: 100%;
+	-webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.exit {
+	width: 100%;
+	-webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.container {
+	margin: 0 1.5rem 1rem 1.5rem;
+}
+
+.linksContainer {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.route {
+	color: var(--mainBlack);
+	padding: 1rem 0.5rem;
+	font-size: 1rem;
+}
+
+.route:hover {
+	background-color: var(--lightGray);
+}
+
+.route:nth-child(7):hover,
+.route:nth-child(8):hover {
+	background-color: var(--mainWhite);
+}
+
+.signin {
+	border: 1px solid var(--lightPurple);
+	border-radius: 1rem;
+	font-size: 0.8rem;
+	color: var(--lightPurple);
+	font-weight: bold;
+	padding: 0.5rem 1.5rem;
+	display: inline-block;
+	transition: all 0.8s ease-in-out;
+}
+
+.demo {
+	border: 1px solid var(--lightPurple);
+	border-radius: 1rem;
+	font-size: 0.8rem;
+	background-color: var(--lightPurple);
+	color: var(--mainWhite);
+	font-weight: bold;
+	padding: 0.5rem 1.5rem;
+	display: inline-block;
+	transition: all 0.8s ease-in-out;
+}
+
+.signin:hover,
+.demo:hover {
+	transform: scale(1.2);
+}
+
+
+@keyframes ease-down {
+	0% {
+		height: 30%;
+		opacity: 0.4;
+	}
+
+	50% {
+		height: 60%;
+		opacity: 0.5;
+	}
+
+	100% {
+		height: 100%;
+		opacity: 1;
+	}
+}
+
+  @-webkit-keyframes slideInDown {
+  0% {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  }
+  @keyframes slideInDown {
+  0% {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  } 
+
+  @-webkit-keyframes slideOutUp {
+  0% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  100% {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  }
+  }
+  @keyframes slideOutUp {
+  0% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  100% {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  }
+  } 
