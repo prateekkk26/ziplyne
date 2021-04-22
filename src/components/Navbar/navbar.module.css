@@ -37,13 +37,8 @@
 	justify-content: flex-end;
 }
 
-.linksContainer li {
-	display: inline;
-}
-
 .route {
 	color: var(--lightPurple);
-	padding: 0 0 0.5rem 0;
 	font-size: 1rem;
 	font-weight: 200;
 	text-transform: capitalize;
@@ -62,7 +57,7 @@
 	color: var(--lightPurple);
 	font-weight: bold;
 	padding: 0.5rem 1.5rem;
-	margin-left: 2.5rem;
+	display: inline-block;
 	transition: all 0.8s ease-in-out;
 }
 
@@ -74,7 +69,7 @@
 	color: var(--mainWhite);
 	font-weight: bold;
 	padding: 0.5rem 1.5rem;
-	margin-left: 1rem;
+	display: inline-block;
 	transition: all 0.8s ease-in-out;
 }
 

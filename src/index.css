@@ -3,9 +3,9 @@
   --lightGray: #F5F5F5;
   --darkGray: #343a40;
   --mainWhite: #fff;
-  --mainBlack: #000;
+  --mainBlack: rgb(51,51,51);
   --lightPurple: #8b34f9;
-  --mainBlue: #262a93;
+  --mainBlue: #262a93; /*rgb(38,42,147)*/
 }
 
 *,

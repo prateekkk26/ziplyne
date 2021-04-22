@@ -1,9 +1,9 @@
 .footer {
 	/*clip-path: polygon(34% 32%, 75% 33%, 100% 62%, 100% 99%, 0 99%, 0% 60%, 0 0);*/
 	width: 100%;
-	background-color: var(--mainBlack);
+	background-color: var(--mainBlue);
+	background-image: linear-gradient( rgba(0,0,0, 0.8), rgba(0,0,0,0.8));
 	/*background-image: linear-gradient(to right, rgba(38, 42, 147, 1),rgba(38, 42, 147, 0.9));*/
-	margin-top: 7rem;
 	padding: 1rem;
 }
 

@@ -24,7 +24,7 @@ const Title = ({title, theme, align}) => {
 		<div className={styles.title}>
 			<div className={styles.container}>
 				<h3 style={{
-					color: theme === "dark" ? '#fff' : "#8b34f9",
+					color: theme === "dark" ? '#fff' : "#262a93",
 					textAlign: align === 'left' ? (windowWidth > 900 ? "left" : "center") : (windowWidth > 900 ? "right" : "center")
 				}}>{title}</h3>
 			</div>

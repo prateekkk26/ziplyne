@@ -1,5 +1,4 @@
 import React from 'react'
-import img from '../../images/review_header.png'
 import styles from './header.module.css'
 
 const Header = () => {

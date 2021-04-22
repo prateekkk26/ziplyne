@@ -30,7 +30,7 @@
 }
 
 .heading p {
-	color: var(--mainPurple);
+	color: var(--mainBlue);
 }
 
 .heading p:first-child {

@@ -20,16 +20,16 @@ const Navbar = ({toggle, setToggle}) => {
 					</div>
 				<FaAlignRight className={styles.toggle} onClick={() => setToggle(!toggle)} />
 				</div>
-				<ul className={styles.linksContainer}>
-					<li><NavLink to="/" exact className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Home</NavLink></li>
-					<li><NavLink to="/product" className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Product</NavLink></li>
-					<li><NavLink to="/use-case" className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Use Cases</NavLink></li>
-					<li><NavLink to="/price" className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Pricing</NavLink></li>
-					<li><NavLink to="/blog" className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Blog</NavLink></li>
-					<li><NavLink to="/meet-the-zipsters" className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Meet the Zipsters</NavLink></li>
-					<li><NavLink to="/sign-in" className={styles.signin} style={{textDecoration: "none"}}>Sign In</NavLink></li>
-					<li><NavLink to="/demo" className={styles.demo} style={{textDecoration: "none"}}>Request a Demo</NavLink></li>
-				</ul>
+				<div className={styles.linksContainer}>
+					<NavLink to="/" exact className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Home</NavLink>
+					<NavLink to="/product" className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Product</NavLink>
+					<NavLink to="/use-case" className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Use Cases</NavLink>
+					<NavLink to="/price" className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Pricing</NavLink>
+					<NavLink to="/blog" className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Blog</NavLink>
+					<NavLink to="/meet-the-zipsters" className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>Meet the Zipsters</NavLink>
+					<NavLink to="/sign-in" className={styles.route} style={{textDecoration: "none"}}><p className={styles.signin}>Sign In</p></NavLink>
+					<NavLink to="/demo" className={styles.route} style={{textDecoration: "none"}}><p className={styles.demo}>Request a Demo</p></NavLink>
+				</div>
 			</div>
 		</div>
 	)

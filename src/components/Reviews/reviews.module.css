@@ -8,7 +8,7 @@
 
 .flexItemDark {
 	padding: 1rem;
-	background-image: linear-gradient(to right, rgba(111, 66, 193, 1),rgba(139, 52, 249, 0.7), rgba(185, 141, 250, 0.8)), url('../../images/darkCircles.png');
+	background-image: linear-gradient(to bottom right, rgba(139, 52, 249, 0.9),rgba(139, 52, 249, 0.8), rgba(14,26,64,0.8)), url('../../images/darkCircles.png');
 	background-size: contain;
 	background-position: bottom right;
 	background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
 .flexItem1 p {
 	font-size: 1.1rem;
-	color: var(--mainWhite);
+	color: var(--lightGray);
 	margin-bottom: 1.5rem;
 	line-height: 2rem;
 	text-align: left;
@@ -55,7 +55,7 @@
 	display: block;
 	font-size: 1.1rem;
 	line-height: 2rem;
-	color: var(--mainBlack);
+	color: #262a93;
 	margin-bottom: 1.5rem;
 	text-align: right;
 	margin-top: 0.7rem;
@@ -84,20 +84,21 @@
 	flex: auto;
 }
 
-.profile:hover {
-	box-shadow: 5px 7px 7px rgba(0,0,0,0.8);
-	opacity: 0.8;
-}
-
 .content {
 	width: 70%;
 	clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 75% 84%, 75% 100%, 50% 85%, 0 85%);
 	padding: 1.5rem;
 	height: auto;
 	flex: 0 1 auto;
-	background-color: rgba(111, 66, 193, 0.8);
-	box-shadow: 0 0 25px var(--mainBlack);
+	/*background-color: rgba(38,42,147, 0.6);*/
+	background-image: linear-gradient( rgba(0,0,0, 0.8), rgba(0,0,0,0.7));
+	box-shadow: 6px 10px 25px var(--mainBlack);
 	align-self: center;
+}
+
+.flexItemLight .content {
+	background-color: rgba(139, 52, 249, 0.9);
+	background-image: linear-gradient( to bottom right, rgba(0,0,0, 0.8), rgba(0,0,0,0.7));
 }
 
 .flexItemDark .content {
@@ -113,7 +114,8 @@
 .content h3,
 .content h5 {
 	margin-bottom: 1rem;
-	color: var(--mainBlue);
+	color: var(--lightPurple);
+	font-weight: bold;
 }
 
 .content h3 {
@@ -121,7 +123,7 @@
 }
 
 .content h5 {
-	font-size: 1.3rem;
+	font-size: 1rem;
 }
 
 .content p {
@@ -148,11 +150,11 @@
 		margin: 2rem auto;
 	}
 	.flexItemDark .content {
-		width: 90%;
+		width: 100%;
 		margin-left: 0;
 	}
 	.flexItemLight .content {
-		width: 90%;
+		width: 100%;
 		margin-right: 0;
 	}
 	.content h3,
