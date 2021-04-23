@@ -8,9 +8,8 @@ const getWindowWidth = () => {
 	return width
 }
 
-const Title = ({title, theme, align}) => {
+const Title = React.forwardRef(({title, theme, align}, ref) => {
 	const [windowWidth, setWindowWidth] = useState(getWindowWidth())
-	const titleRef = useRef(null)
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -21,29 +20,10 @@ const Title = ({title, theme, align}) => {
 		// return () => window.removeEventListener('resize', handleResize)
 	}, [])
 
-	useEffect(() => {
-		gsap.from(titleRef.current, {
-				y: -50,
-				duration: 1,
-				delay: 0.1,
-				paused: true,
-				opacity: 0,
-				ease: "power2",
-				scrub: true,
-				scrollTrigger: {
-					trigger: titleRef.current,
-					start: "top center",
-					end: "20px 80%",
-					toggleActions: "restart play complete reverse",
-					markers: false,
-				}
-			})
-	})
-
 
 	return (
-		<div className={styles.title}>
-			<div ref={titleRef} className={styles.container}>
+		<div ref={ref} className={styles.title}>
+			<div className={styles.container}>
 				<h3 style={{
 					color: theme === "dark" ? '#fff' : "#262a93",
 					textAlign: align === 'left' ? (windowWidth > 900 ? "left" : "center") : (windowWidth > 900 ? "right" : "center")
@@ -51,6 +31,6 @@ const Title = ({title, theme, align}) => {
 			</div>
 		</div>
 	)
-}
+})
 
 export default Title

@@ -14,6 +14,40 @@ ScrollTrigger.defaults({
 
 
 const Reviews = () => {
+	const mainRef = useRef(null)
+
+	const titleRefs = useRef([]);
+	titleRefs.current = [];
+
+	const addToTitleRefs = el => {
+	    if (el && !titleRefs.current.includes(el)) {
+	      titleRefs.current.push(el);
+	    }
+	};
+
+	useEffect(() => {
+
+	    // Title
+	    titleRefs.current.forEach(el => {
+	      gsap.from(el, {
+	      	y: -50,
+			duration: 1,
+			delay: 1,
+			paused: true,
+			opacity: 0,
+			ease: "power2",
+			scrub: true,
+	        scrollTrigger: {
+				trigger: el,
+				start: "top center",
+				end: "20px 80%",
+				toggleActions: "restart play complete reverse",
+				markers: false,
+	        },
+	      });
+	    });
+	});
+
 
 	const infoRefs = useRef([]);
 	infoRefs.current = [];
@@ -25,6 +59,7 @@ const Reviews = () => {
 	};
 
 	useEffect(() => {
+
 	    // Info
 	    infoRefs.current.forEach(el => {
 	      gsap.from(el, {
@@ -113,11 +148,11 @@ const Reviews = () => {
 
 
 	return (
-		<div className={styles.reviews}>
+		<div ref={mainRef} className={styles.reviews}>
 			<div className={styles.container}>
 				<div className={styles.flexItemDark}>
 					<div className={styles.flexItem1}>
-						<Title title="Customer Engagement / User Experience" theme="dark" align="left" />
+						<Title ref={addToTitleRefs} title="Customer Engagement / User Experience" theme="dark" align="left" />
 						<div className={styles.line}></div>
 						<br />
 						<p ref={addToInfoRefs} className={styles.info}>
@@ -143,7 +178,7 @@ const Reviews = () => {
 				</div>
 				<div className={styles.flexItemLight}>
 				<div className={styles.flexItem2}>
-					<Title title="Employee Software Adoption / Retention" theme="light" align="right" />
+					<Title ref={addToTitleRefs} title="Employee Software Adoption / Retention" theme="light" align="right" />
 					<div className={styles.line}></div>
 					<br />
 					<p ref={addToInfoRefs} className={styles.info}>
@@ -178,7 +213,7 @@ const Reviews = () => {
 				</div>
 				<div className={styles.flexItemDark}>
 					<div className={styles.flexItem1}>
-						<Title title="Sales Enablement / Demos" theme="dark" align="left" />
+						<Title ref={addToTitleRefs} title="Sales Enablement / Demos" theme="dark" align="left" />
 						<div className={styles.line}></div>
 						<br />
 						<p ref={addToInfoRefs} className={styles.info}>
@@ -211,7 +246,7 @@ const Reviews = () => {
 				</div>
 				<div className={styles.flexItemLight}>
 				<div className={styles.flexItem2}>
-					<Title title="HelpDesk / Customer Service Support Optimization" theme="light" align="right" />
+					<Title ref={addToTitleRefs} title="HelpDesk / Customer Service Support Optimization" theme="light" align="right" />
 					<div className={styles.line}></div>
 					<br />
 					<p ref={addToInfoRefs} className={styles.info}>

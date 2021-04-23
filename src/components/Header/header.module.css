@@ -24,7 +24,6 @@
 }
 
 .heading {
-	clear: both;
 	width: 100%;
 	margin: 7rem auto;
 	text-align: center;
@@ -49,12 +48,4 @@
 	margin: 1.5rem auto;
 	border-top: 7px solid var(--darkGray);
 	border-right: 7px solid var(--darkGray);
-}
-
-.img {
-	width: 70%;
-}
-
-@media screen and (max-width: 900px) {
-	
 }

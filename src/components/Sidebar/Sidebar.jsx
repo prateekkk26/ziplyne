@@ -10,6 +10,7 @@ const Sidebar = ({toggle}) => {
 	const t1 = new TimelineLite({ delay: 0.2 })
 
 	useEffect(() => {
+		sidebarRef.current.style.visibility = 'visible'
 		t1.from(sidebarRef.current, {
 			y: -50,
 			opacity: 0,
@@ -22,9 +23,9 @@ const Sidebar = ({toggle}) => {
 	})
 
 	return (
-		<div className={`${styles.sidebar}`}>
+		<div ref={sidebarRef} className={`${styles.sidebar}`}>
 			<div className={styles.container}>
-				<div ref={sidebarRef} className={styles.linksContainer}>
+				<div className={styles.linksContainer}>
 					<NavLink to="/" exact className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>
 						Home
 					</NavLink>
