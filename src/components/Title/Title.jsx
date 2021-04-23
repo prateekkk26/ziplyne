@@ -22,7 +22,6 @@ const Title = ({title, theme, align}) => {
 	}, [])
 
 	useEffect(() => {
-		titleRef.current.style.visibility = 'visible'
 		gsap.from(titleRef.current, {
 				y: -50,
 				duration: 1,
@@ -43,9 +42,9 @@ const Title = ({title, theme, align}) => {
 
 
 	return (
-		<div  className={styles.title}>
-			<div className={styles.container}>
-				<h3 ref={titleRef} style={{
+		<div className={styles.title}>
+			<div ref={titleRef} className={styles.container}>
+				<h3 style={{
 					color: theme === "dark" ? '#fff' : "#262a93",
 					textAlign: align === 'left' ? (windowWidth > 900 ? "left" : "center") : (windowWidth > 900 ? "right" : "center")
 				}}>{title}</h3>
