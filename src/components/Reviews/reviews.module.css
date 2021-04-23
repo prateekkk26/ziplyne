@@ -29,6 +29,7 @@
 	height: auto;
 	max-width: 75rem;
 	margin: 4rem auto;
+	z-index: 0;
 }
 
 .flexItem1 p {
@@ -59,6 +60,7 @@
 	margin-bottom: 1.5rem;
 	text-align: right;
 	margin-top: 0.7rem;
+	z-index: 0;
 }
 
 /*.flexItemLight .line::before {
@@ -82,6 +84,7 @@
 	transition: all 0.5s ease-in-out;
 	border-radius: 50%;
 	flex: auto;
+	z-index: 0;
 }
 
 .content {

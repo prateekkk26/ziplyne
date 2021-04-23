@@ -1,9 +1,10 @@
 .sidebar {
 	width: 100%;
 	position: sticky;
-	height: auto;
+	height: 90vh;
 	top: 0;
-	background-color: var(--mainWhite); 
+	background-color: var(--mainWhite);
+  z-index: 100000;
 }
 
 .entry {

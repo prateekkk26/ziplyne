@@ -1,8 +1,117 @@
-import React from 'react'
+import React, { useRef, useEffect} from 'react'
 import styles from './reviews.module.css'
 import Title from '../Title/Title'
 
+import { gsap } from 'gsap'
+import {ScrollTrigger}  from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({
+  toggleActions: "restart pause reverse pause",
+  markers: false
+});
+
+
 const Reviews = () => {
+
+	const infoRefs = useRef([]);
+	infoRefs.current = [];
+
+	const addToInfoRefs = el => {
+	    if (el && !infoRefs.current.includes(el)) {
+	      infoRefs.current.push(el);
+	    }
+	};
+
+	useEffect(() => {
+	    // Info
+	    infoRefs.current.forEach(el => {
+	      gsap.from(el, {
+	      	y: -50,
+			duration: 1,
+			delay: 1,
+			paused: true,
+			opacity: 0,
+			ease: "power2",
+			scrub: true,
+	        scrollTrigger: {
+				trigger: el,
+				start: "top center",
+				end: "20px 80%",
+				toggleActions: "restart play complete reverse",
+				markers: false,
+	        },
+	      });
+	    });
+	});
+
+
+	const profileRefs = useRef([]);
+	profileRefs.current = [];
+
+	const addToProfileRefs = el => {
+	    if (el && !profileRefs.current.includes(el)) {
+	      profileRefs.current.push(el);
+	    }
+	};
+
+	useEffect(() => {
+		// Profile
+	    profileRefs.current.forEach(el => {
+	      gsap.from(el, {
+	      	x: -50,
+			duration: 1,
+			paused: true,
+			opacity: 0,
+			ease: "power2",
+			scrub: true,
+	        scrollTrigger: {
+				trigger: el,
+				start: "top center",
+				end: "20px 80%",
+				toggleActions: "restart play complete reverse",
+				markers: false,
+	        },
+	      });
+	    });
+	});
+
+
+	const reviewRefs = useRef([]);
+	reviewRefs.current = [];
+
+	const addToReviewRefs = el => {
+	    if (el && !reviewRefs.current.includes(el)) {
+	      reviewRefs.current.push(el);
+	    }
+	};
+
+	useEffect(() => {
+		// Review
+	    reviewRefs.current.forEach(el => {
+	      gsap.from(el, {
+	      	x: 150,
+			duration: 1,
+			paused: true,
+			opacity: 0,
+			ease: "power2",
+			scrub: true,
+	        scrollTrigger: {
+				trigger: el,
+				start: "top center",
+				end: "20px 80%",
+				toggleActions: "restart play complete reverse",
+				markers: false,
+	        },
+	      });
+	    });
+	});
+
+
+
+
+
 	return (
 		<div className={styles.reviews}>
 			<div className={styles.container}>
@@ -11,7 +120,7 @@ const Reviews = () => {
 						<Title title="Customer Engagement / User Experience" theme="dark" align="left" />
 						<div className={styles.line}></div>
 						<br />
-						<p className={styles.info}>
+						<p ref={addToInfoRefs} className={styles.info}>
 							Your product and site may be second to none but little
 							will matter if your prospective users/customers are
 							unwilling to power through the on-boarding friction.
@@ -21,8 +130,8 @@ const Reviews = () => {
 							engagement and conversion.
 						</p>
 						<div className={styles.client}>
-							<img src="https://www.ziplyne.com/static/media/Jon%20Ching.a31df5fd.jpeg" alt="" className={styles.profile} />
-								<div className={styles.content}>
+							<img ref={addToProfileRefs} src="https://www.ziplyne.com/static/media/Jon%20Ching.a31df5fd.jpeg" alt="" className={styles.profile} />
+								<div ref={addToReviewRefs} className={styles.content}>
 									<h3>Jon Ching</h3>
 									<h5>Founder & CEO Musing</h5>
 									<p>
@@ -37,7 +146,7 @@ const Reviews = () => {
 					<Title title="Employee Software Adoption / Retention" theme="light" align="right" />
 					<div className={styles.line}></div>
 					<br />
-					<p className={styles.info}>
+					<p ref={addToInfoRefs} className={styles.info}>
 						How happy are you with your SaaS ROI? Are your employees
 						utilizing your subscription software at the levels you expect?
 
@@ -53,7 +162,7 @@ const Reviews = () => {
 						Better training leads to higher retention and less attrition.
 					</p>
 					<div className={styles.client}>
-							<div className={styles.content}>
+							<div ref={addToReviewRefs} className={styles.content}>
 								<h3>Bob Hatter</h3>
 								<h5>Director, Cincinnati Operations at Velosio</h5>
 								<p>
@@ -63,7 +172,7 @@ const Reviews = () => {
 									high costs and inefficiencies associated with traditional training and support modes.
 								</p>
 							</div>
-							<img src="https://www.ziplyne.com/static/media/Bob%20Hatter.a5de9ee3.jpeg" alt="" className={styles.profile} />
+							<img ref={addToProfileRefs}  src="https://www.ziplyne.com/static/media/Bob%20Hatter.a5de9ee3.jpeg" alt="" className={styles.profile} />
 					</div>
 				</div>
 				</div>
@@ -72,7 +181,7 @@ const Reviews = () => {
 						<Title title="Sales Enablement / Demos" theme="dark" align="left" />
 						<div className={styles.line}></div>
 						<br />
-						<p className={styles.info}>
+						<p ref={addToInfoRefs} className={styles.info}>
 							Imagine if you could give every member of your sales team
 							a personal on-site coach 24/7. Sales reps often have their
 							hands full staying current with both 3rd party tools and
@@ -89,8 +198,8 @@ const Reviews = () => {
 							most importantly, boost your win-rate!
 						</p>
 						<div className={styles.client}>
-							<img src="https://www.ziplyne.com/static/media/Jonathan.e8ea5584.jpeg" alt="" className={styles.profile} />
-								<div className={styles.content}>
+							<img ref={addToProfileRefs}  src="https://www.ziplyne.com/static/media/Jonathan.e8ea5584.jpeg" alt="" className={styles.profile} />
+								<div ref={addToReviewRefs} className={styles.content}>
 									<h3>Jonathan Brickman</h3>
 									<h5>Veteran SaaS Sales Executive</h5>
 									<p>
@@ -105,7 +214,7 @@ const Reviews = () => {
 					<Title title="HelpDesk / Customer Service Support Optimization" theme="light" align="right" />
 					<div className={styles.line}></div>
 					<br />
-					<p className={styles.info}>
+					<p ref={addToInfoRefs} className={styles.info}>
 						Market studies have shown that 60-70% of Tier 1 support
 						tickets are repetitive and common. The automation of
 						Ziplyne cuts down on excess support resources and
@@ -121,14 +230,14 @@ const Reviews = () => {
 						are reduced.
 					</p>
 					<div className={styles.client}>
-							<div className={styles.content}>
+							<div ref={addToReviewRefs} className={styles.content}>
 								<h3>Kunal Kumar</h3>
 								<h5>SVP, Production & Marketing 5678 Media Group</h5>
 								<p>
 									As a company, we were looking for a way to simplify the dance application process for 10,000+ applicants. Ziplyne simplified the entire applicant onboarding process and helped us cut down on the common and repetitive questions that would otherwise come to our phones, emails, chats, etc.
 								</p>
 							</div>
-							<img src="https://www.ziplyne.com/static/media/Kunal%20Kumar.d1b005c6.jpeg" alt="" className={styles.profile} />
+							<img ref={addToProfileRefs}  src="https://www.ziplyne.com/static/media/Kunal%20Kumar.d1b005c6.jpeg" alt="" className={styles.profile} />
 					</div>
 				</div>
 				</div>

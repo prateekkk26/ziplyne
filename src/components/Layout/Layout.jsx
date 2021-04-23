@@ -12,10 +12,12 @@ const Layout = ({children}) => {
 			{
 				toggle && <Sidebar toggle={toggle} setToggle={setToggle} />
 			}
-			<main>
-				{children}
-			</main>	
-			<Footer />
+			{
+				!toggle && <main>{children}</main>
+			}	
+			{
+				!toggle && <Footer />
+			}
 		</div>
 	)
 }

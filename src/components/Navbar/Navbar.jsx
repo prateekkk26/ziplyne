@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from './navbar.module.css'
 import { NavLink, Link } from 'react-router-dom'
 import logo from '../../images/logo.png'
 import { FaAlignRight } from 'react-icons/fa'
 
+import{ TimelineLite, Power3 } from 'gsap'
+
 const Navbar = ({toggle, setToggle}) => {
+	let navRef = useRef(null)
+	let t1 = new TimelineLite({ delay: 0.3 });
+
+	useEffect(() => {
+		navRef.style.visibility = 'visible'
+		t1.from(navRef, {
+			y: -10,
+			opacity: 0,
+			ease: Power3.easeOut,
+			delay: 0.2,
+			duration: 2
+		},
+		0.35,
+		'Start')
+	})
+
 	return (
-		<div className={styles.navbar}>
+		<div ref={el => navRef = el} className={styles.navbar}>
 			<div className={styles.container}>
 				<div className={styles.toggleContainer}>
 					<div className={styles.logoContainer}>

@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './sidebar.module.css'
 
+import { TimelineLite } from 'gsap'
+
 const Sidebar = ({toggle}) => {
+	const sidebarRef = useRef(null)
+
+	const t1 = new TimelineLite({ delay: 0.2 })
+
+	useEffect(() => {
+		t1.from(sidebarRef.current, {
+			y: -50,
+			opacity: 0,
+			ease: "power2",
+			duration: 1
+		},
+		0.35,
+		'Start'
+		)
+	})
+
 	return (
 		<div className={`${styles.sidebar}`}>
 			<div className={styles.container}>
-				<div className={styles.linksContainer}>
+				<div ref={sidebarRef} className={styles.linksContainer}>
 					<NavLink to="/" exact className={styles.route} activeStyle={{color: "#6f42c1", fontWeight: "bold"}} style={{textDecoration: "none"}}>
 						Home
 					</NavLink>
