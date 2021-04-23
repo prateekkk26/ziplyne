@@ -1,0 +1,18 @@
+.btn {
+	border: 1px solid var(--mainPurple);
+	padding: 1rem;
+	border-radius: 50%;
+	position: fixed;
+	background-color: var(--mainBlack);
+	background-image: linear-gradient(to bottom right, rgba(139, 52, 249, 0.9),rgba(139, 52, 249, 0.8));
+	bottom: 1rem;
+	right: 1rem;
+	box-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+.icon {
+	font-size: 2rem;
+	color: var(--mainWhite);
+	vertical-align: middle;
+	align-self: center;
+}

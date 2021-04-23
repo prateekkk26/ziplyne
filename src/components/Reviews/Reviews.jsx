@@ -96,10 +96,10 @@ const Reviews = () => {
 	    profileRefs.current.forEach(el => {
 	      gsap.from(el, {
 	      	x: -50,
-			duration: 1,
+			duration: 0.5,
 			paused: true,
 			opacity: 0,
-			ease: "power2",
+			ease: "power4",
 			scrub: true,
 	        scrollTrigger: {
 				trigger: el,
@@ -153,8 +153,6 @@ const Reviews = () => {
 				<div className={styles.flexItemDark}>
 					<div className={styles.flexItem1}>
 						<Title ref={addToTitleRefs} title="Customer Engagement / User Experience" theme="dark" align="left" />
-						<div className={styles.line}></div>
-						<br />
 						<p ref={addToInfoRefs} className={styles.info}>
 							Your product and site may be second to none but little
 							will matter if your prospective users/customers are
@@ -165,7 +163,12 @@ const Reviews = () => {
 							engagement and conversion.
 						</p>
 						<div className={styles.client}>
-							<img ref={addToProfileRefs} src="https://www.ziplyne.com/static/media/Jon%20Ching.a31df5fd.jpeg" alt="" className={styles.profile} />
+							<img 
+								ref={addToProfileRefs} 
+								src="https://www.ziplyne.com/static/media/Jon%20Ching.a31df5fd.jpeg" 
+								alt="Jon Ching" 
+								className={styles.profile} 
+							/>
 								<div ref={addToReviewRefs} className={styles.content}>
 									<h3>Jon Ching</h3>
 									<h5>Founder & CEO Musing</h5>
@@ -179,8 +182,6 @@ const Reviews = () => {
 				<div className={styles.flexItemLight}>
 				<div className={styles.flexItem2}>
 					<Title ref={addToTitleRefs} title="Employee Software Adoption / Retention" theme="light" align="right" />
-					<div className={styles.line}></div>
-					<br />
 					<p ref={addToInfoRefs} className={styles.info}>
 						How happy are you with your SaaS ROI? Are your employees
 						utilizing your subscription software at the levels you expect?
@@ -207,15 +208,18 @@ const Reviews = () => {
 									high costs and inefficiencies associated with traditional training and support modes.
 								</p>
 							</div>
-							<img ref={addToProfileRefs}  src="https://www.ziplyne.com/static/media/Bob%20Hatter.a5de9ee3.jpeg" alt="" className={styles.profile} />
+							<img 
+								ref={addToProfileRefs} 
+								src="https://www.ziplyne.com/static/media/Bob%20Hatter.a5de9ee3.jpeg" 
+								alt="Bob Hatter" 
+								className={styles.profile} 
+							/>
 					</div>
 				</div>
 				</div>
 				<div className={styles.flexItemDark}>
 					<div className={styles.flexItem1}>
 						<Title ref={addToTitleRefs} title="Sales Enablement / Demos" theme="dark" align="left" />
-						<div className={styles.line}></div>
-						<br />
 						<p ref={addToInfoRefs} className={styles.info}>
 							Imagine if you could give every member of your sales team
 							a personal on-site coach 24/7. Sales reps often have their
@@ -233,7 +237,12 @@ const Reviews = () => {
 							most importantly, boost your win-rate!
 						</p>
 						<div className={styles.client}>
-							<img ref={addToProfileRefs}  src="https://www.ziplyne.com/static/media/Jonathan.e8ea5584.jpeg" alt="" className={styles.profile} />
+							<img 
+								ref={addToProfileRefs} 
+								src="https://www.ziplyne.com/static/media/Jonathan.e8ea5584.jpeg" 
+								alt="Jonathan Brickman" 
+								className={styles.profile} 
+							/>
 								<div ref={addToReviewRefs} className={styles.content}>
 									<h3>Jonathan Brickman</h3>
 									<h5>Veteran SaaS Sales Executive</h5>
@@ -247,8 +256,6 @@ const Reviews = () => {
 				<div className={styles.flexItemLight}>
 				<div className={styles.flexItem2}>
 					<Title ref={addToTitleRefs} title="HelpDesk / Customer Service Support Optimization" theme="light" align="right" />
-					<div className={styles.line}></div>
-					<br />
 					<p ref={addToInfoRefs} className={styles.info}>
 						Market studies have shown that 60-70% of Tier 1 support
 						tickets are repetitive and common. The automation of
@@ -272,7 +279,12 @@ const Reviews = () => {
 									As a company, we were looking for a way to simplify the dance application process for 10,000+ applicants. Ziplyne simplified the entire applicant onboarding process and helped us cut down on the common and repetitive questions that would otherwise come to our phones, emails, chats, etc.
 								</p>
 							</div>
-							<img ref={addToProfileRefs}  src="https://www.ziplyne.com/static/media/Kunal%20Kumar.d1b005c6.jpeg" alt="" className={styles.profile} />
+							<img 
+								ref={addToProfileRefs} 
+								src="https://www.ziplyne.com/static/media/Kunal%20Kumar.d1b005c6.jpeg" 
+								alt="Kunal Kumar" 
+								className={styles.profile} 
+							/>
 					</div>
 				</div>
 				</div>

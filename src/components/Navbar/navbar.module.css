@@ -3,11 +3,12 @@
 	background-color: var(--mainWhite);
 	position: sticky;
 	top: 0;
-	z-index: 10000;
+	z-index: 1000;
 	visibility: hidden;
 }
 
 .container {
+	max-width: 100%;
 	display: flex;
 	justify-content: space-between;
 	margin: 0 1.5rem;
@@ -39,7 +40,6 @@
 }
 
 .route {
-	color: var(--lightPurple);
 	font-size: 1rem;
 	font-weight: 200;
 	text-transform: capitalize;
@@ -48,7 +48,7 @@
 
 .route:visited,
 .route:link {
-	color: var(--mainBlack);
+	color: var(--mainPurple);
 }
 
 .signin {

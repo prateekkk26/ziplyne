@@ -11,8 +11,8 @@ const Navbar = ({toggle, setToggle}) => {
 	let t1 = new TimelineLite({ delay: 0.3 });
 
 	useEffect(() => {
-		navRef.style.visibility = 'visible'
-		t1.from(navRef, {
+		navRef.current.style.visibility = 'visible'
+		t1.from(navRef.current, {
 			y: -10,
 			opacity: 0,
 			ease: Power3.easeOut,
@@ -24,7 +24,7 @@ const Navbar = ({toggle, setToggle}) => {
 	})
 
 	return (
-		<div ref={el => navRef = el} className={styles.navbar}>
+		<div ref={navRef} className={styles.navbar}>
 			<div className={styles.container}>
 				<div className={styles.toggleContainer}>
 					<div className={styles.logoContainer}>

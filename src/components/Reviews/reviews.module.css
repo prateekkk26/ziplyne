@@ -3,10 +3,11 @@
 }
 
 .container {
-	width: 100%;
+	max-width: 100%;
 }
 
 .flexItemDark {
+	width: 100%;
 	padding: 1rem;
 	background-image: linear-gradient(to bottom right, rgba(139, 52, 249, 0.9),rgba(139, 52, 249, 0.8), rgba(14,26,64,0.8)), url('../../images/darkCircles.png');
 	background-size: contain;
@@ -15,6 +16,7 @@
 }
 
 .flexItemLight {
+	width: 100%;
 	background-color: var(--mainWhite);
 	padding: 1rem;
 	background-color: #ffffff;
@@ -26,18 +28,19 @@
 
 .flexItem1,
 .flexItem2 {
-	height: auto;
-	max-width: 75rem;
+	width: 100%;
 	margin: 4rem auto;
-	z-index: 0;
+	max-width: 75rem;
 }
 
 .flexItem1 p {
+	display: block;
 	font-size: 1.1rem;
 	color: var(--lightGray);
 	margin-bottom: 1.5rem;
 	line-height: 2rem;
 	text-align: left;
+	margin-top: 0.7rem;
 }
 
 /*.flexItemDark .line::before {
@@ -76,6 +79,7 @@
 	width: 100%;
 	margin: 2.5rem 0;
 	display: flex;
+	flex: 1;
 	justify-content: space-between;
 }
 
@@ -96,12 +100,6 @@
 	/*background-color: rgba(38,42,147, 0.6);*/
 	background-image: linear-gradient( rgba(0,0,0, 0.8), rgba(0,0,0,0.7));
 	box-shadow: 6px 10px 25px var(--mainBlack);
-	align-self: center;
-}
-
-.flexItemLight .content {
-	background-color: rgba(139, 52, 249, 0.9);
-	background-image: linear-gradient( to bottom right, rgba(0,0,0, 0.8), rgba(0,0,0,0.7));
 }
 
 .flexItemDark .content {
@@ -112,6 +110,8 @@
 .flexItemLight .content {
 	margin-right: 2rem;
 	text-align: right;
+	background-color: rgba(139, 52, 249, 0.9);
+	background-image: linear-gradient( to bottom right, rgba(0,0,0, 0.8), rgba(0,0,0,0.7));
 }
 
 .content h3,

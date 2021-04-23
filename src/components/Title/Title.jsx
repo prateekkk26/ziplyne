@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect  } from 'react'
 import styles from './title.module.css'
-
-import { gsap } from 'gsap'
 
 const getWindowWidth = () => {
 	const { innerWidth: width } = window

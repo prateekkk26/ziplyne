@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import Sidebar from '../Sidebar/Sidebar'
+import ChatButton from '../ChatButton/ChatButton'
 
 const Layout = ({children}) => {
 	const [toggle, setToggle] = useState(false);
@@ -18,6 +19,7 @@ const Layout = ({children}) => {
 			{
 				!toggle && <Footer />
 			}
+			<ChatButton />
 		</div>
 	)
 }
