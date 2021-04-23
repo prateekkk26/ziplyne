@@ -5,7 +5,9 @@ import styles from './chatButton.module.css'
 const ChatButton = () => {
 	return (
 		<div className={styles.btn}>
-			<MdChatBubble className={styles.icon} />
+			<div className={styles.container}>
+				<MdChatBubble className={styles.icon} />
+			</div>
 		</div>
 	)
 }

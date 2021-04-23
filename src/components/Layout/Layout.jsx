@@ -8,7 +8,7 @@ const Layout = ({children}) => {
 	const [toggle, setToggle] = useState(false);
 
 	return (
-		<div style={{display: "flex", "flexDirection": "column", width: "100%"}}>
+		<div style={{position: "relative", display: "flex", "flexDirection": "column", width: "100%"}}>
 			<Navbar toggle={toggle} setToggle={setToggle} />
 			{
 				toggle && <Sidebar toggle={toggle} setToggle={setToggle} />

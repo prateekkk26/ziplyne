@@ -108,7 +108,7 @@ const Footer = () => {
 						<p className={styles.btn}>Show us what you got</p>
 					</div>
 				</div>
-				<p className={styles.copy}>&copy;-2020 <span>Ziplyte</span>. All rights reserved</p>
+				<p className={styles.copy}>&copy;-2020 <span>Ziplyne</span>. All rights reserved</p>
 			</div>
 		</div>
 	)
