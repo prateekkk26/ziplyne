@@ -68,7 +68,7 @@ const Footer = () => {
 			ease: "power2",
 			scrub: true,
 	        scrollTrigger: {
-				trigger: boxRef.current,
+				trigger: linksRef.current,
 				start: "top center",
 				end: "20px 80%",
 				toggleActions: "restart play complete reverse",

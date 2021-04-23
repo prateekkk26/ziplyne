@@ -144,9 +144,6 @@ const Reviews = () => {
 	});
 
 
-
-
-
 	return (
 		<div ref={mainRef} className={styles.reviews}>
 			<div className={styles.container}>
@@ -169,53 +166,53 @@ const Reviews = () => {
 								alt="Jon Ching" 
 								className={styles.profile} 
 							/>
-								<div ref={addToReviewRefs} className={styles.content}>
-									<h3>Jon Ching</h3>
-									<h5>Founder & CEO Musing</h5>
-									<p>
-										Each time a user visits, we want them to understand the value of our site and have them contribute to asking questions or answering another user’s question as fast as possible. Ziplyne allows us to decrease the time to value without adding any manual interaction with our users.
-									</p>
-								</div>
+							<div ref={addToReviewRefs} className={styles.content}>
+								<h3>Jon Ching</h3>
+								<h5>Founder & CEO Musing</h5>
+								<p>
+									Each time a user visits, we want them to understand the value of our site and have them contribute to asking questions or answering another user’s question as fast as possible. Ziplyne allows us to decrease the time to value without adding any manual interaction with our users.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div className={styles.flexItemLight}>
-				<div className={styles.flexItem2}>
-					<Title ref={addToTitleRefs} title="Employee Software Adoption / Retention" theme="light" align="right" />
-					<p ref={addToInfoRefs} className={styles.info}>
-						How happy are you with your SaaS ROI? Are your employees
-						utilizing your subscription software at the levels you expect?
+					<div className={styles.flexItem2}>
+						<Title ref={addToTitleRefs} title="Employee Software Adoption / Retention" theme="light" align="right" />
+						<p ref={addToInfoRefs} className={styles.info}>
+							How happy are you with your SaaS ROI? Are your employees
+							utilizing your subscription software at the levels you expect?
 
-						Past solutions (e.g. video tutorials, PDF guides) have often
-						been time-consuming to produce, expensive to maintain
-						and/or non-scalable.
+							Past solutions (e.g. video tutorials, PDF guides) have often
+							been time-consuming to produce, expensive to maintain
+							and/or non-scalable.
 
-						Ziplyne enables users to learn directly within the application
-						and within in the moment. The onboarding/adoption process
-						can be tailored your individual user base and adjusted
-						dynamically and contextually for "real" adoption.
+							Ziplyne enables users to learn directly within the application
+							and within in the moment. The onboarding/adoption process
+							can be tailored your individual user base and adjusted
+							dynamically and contextually for "real" adoption.
 
-						Better training leads to higher retention and less attrition.
-					</p>
-					<div className={styles.client}>
-							<div ref={addToReviewRefs} className={styles.content}>
-								<h3>Bob Hatter</h3>
-								<h5>Director, Cincinnati Operations at Velosio</h5>
-								<p>
-									Ziplyne helps us service our many customers with offices and users spread around the globe. Utilizing Ziplyne in conjunction with new application 
-									introduction allows customers to easily document their 
-									existing and new policies, rules, workflows, and procedures and embed these context specific text and video elements directly into relevant locations of the user screens. As a result, Ziplyne enabled our customers to significantly reduce the 
-									high costs and inefficiencies associated with traditional training and support modes.
-								</p>
-							</div>
-							<img 
-								ref={addToProfileRefs} 
-								src="https://www.ziplyne.com/static/media/Bob%20Hatter.a5de9ee3.jpeg" 
-								alt="Bob Hatter" 
-								className={styles.profile} 
-							/>
+							Better training leads to higher retention and less attrition.
+						</p>
+						<div className={styles.client}>
+								<div ref={addToReviewRefs} className={styles.content}>
+									<h3>Bob Hatter</h3>
+									<h5>Director, Cincinnati Operations at Velosio</h5>
+									<p>
+										Ziplyne helps us service our many customers with offices and users spread around the globe. Utilizing Ziplyne in conjunction with new application 
+										introduction allows customers to easily document their 
+										existing and new policies, rules, workflows, and procedures and embed these context specific text and video elements directly into relevant locations of the user screens. As a result, Ziplyne enabled our customers to significantly reduce the 
+										high costs and inefficiencies associated with traditional training and support modes.
+									</p>
+								</div>
+								<img 
+									ref={addToProfileRefs} 
+									src="https://www.ziplyne.com/static/media/Bob%20Hatter.a5de9ee3.jpeg" 
+									alt="Bob Hatter" 
+									className={styles.profile} 
+								/>
+						</div>
 					</div>
-				</div>
 				</div>
 				<div className={styles.flexItemDark}>
 					<div className={styles.flexItem1}>

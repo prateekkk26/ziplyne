@@ -4,14 +4,12 @@ import styles from './header.module.css'
 import { TimelineLite, Power3 } from 'gsap'
 
 const Header = () => {
-	let headRef = useRef(null)
 	let line1 = useRef(null)
 	let line2 = useRef(null)
 
 	const t1 = new TimelineLite({ delay: 0.2 })
 
 	useEffect(() => {
-		headRef.style.visibility = 'visible'
 		t1.from(line1, {
 			x: -50,
 			opacity: 0,
@@ -37,7 +35,7 @@ const Header = () => {
 	})
 
 	return (
-		<div ref={el => headRef = el} className={styles.header}>
+		<div className={styles.header}>
 			<div className={styles.container}>
 				<div className={styles.heading}>
 					<p ref={el => line1 = el}>We're Here to Help!</p>
