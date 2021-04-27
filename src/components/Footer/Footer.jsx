@@ -19,6 +19,7 @@ ScrollTrigger.defaults({
 });
 
 const Footer = () => {
+	let footerRef = useRef(null)
 	let iconsRef= useRef(null)
 	let linksRef = useRef(null)
 	let boxRef = useRef(null)
@@ -32,7 +33,7 @@ const Footer = () => {
 			ease: "power2",
 			scrub: true,
 	        scrollTrigger: {
-				trigger: iconsRef.current,
+				trigger: footerRef.current,
 				start: "top center",
 				end: "20px 80%",
 				toggleActions: "restart play complete reverse",
@@ -78,7 +79,7 @@ const Footer = () => {
 	})
 
 	return (
-		<div className={styles.footer}>
+		<div ref={footerRef} className={styles.footer}>
 			<div className={styles.container}>
 				<div className={styles.footerInfo}>
 					<div ref={iconsRef} className={styles.iconsContainer}>
